@@ -1,0 +1,39 @@
+#movies img,
+#movie img {
+  width: 100%;
+}
+.brand-text {
+  font-size: 2rem;
+}
+#react-logo {
+  color: #00d8ff;
+}
+#imdb-logo {
+  color: #f5de50;
+}
+@media (min-width: 960px) {
+  #movies .col-md-3 .well {
+    height: 390px;
+  }
+
+  #movies .col-md-3 img {
+    height: 240px;
+  }
+}
+/* 
+@media (max-width: 769px) {
+  #resp1 {
+    font-size: 4px;
+  }
+  #resp2 {
+    display: none;
+  }
+  #resp3 {
+    margin: auto;
+ display: flex;
+ justify-content: space-around;
+ flex-wrap: wrap;
+  }
+}
+
+ */

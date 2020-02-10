@@ -1,0 +1,50 @@
+//it taking the actions and testing the actions
+import { 
+  SEARCH_MOVIE,
+  FETCH_MOVIES,
+  FETCH_MOVIE,
+  LOADING
+ } from '../actions/types';
+
+//we need to create the initial states
+const initialState = {
+    //it is search text that user will be entering in search bar
+    text : '',
+    //search results
+    movies : [],
+    //if movies-empty loding-true : if movies-atleast1 loading-false
+    loading : false,
+    //displaying single movie
+    movie : [],
+};
+ 
+export default function(state = initialState, action) {
+    switch (action.type) {
+        case SEARCH_MOVIE:
+            return{
+              ...state,
+              text: action.payload,
+              loading:false   
+            }
+        case FETCH_MOVIES:
+           return{
+             ...state,
+             movies: action.payload,
+             loading: false,
+            }
+        case FETCH_MOVIE:
+        return{
+          ...state,
+          movie: action.payload,
+          loading: false
+            }
+        case LOADING:
+        return{
+          ...state,
+          loading: true,
+            }
+            
+        default:
+            return state; 
+    }
+}
